@@ -1,16 +1,20 @@
 import "./App.css";
-import { CreateBrowserRouter } from "./Components/CreateBrowserRouter/CreateBrowserRouter";
-import { DynamicRouting } from "./Components/DynamicRouting/DynamicRouting";
-import { NestedRouting } from "./Components/NestedRouting/NestedRouting";
-import { NormalRouting } from "./Components/NormalRouting/NormalRouting";
+import { FilterSearchBox } from "./MachineCoding/FilterSearchBox";
+// import { ListingWithAPI } from "./MachineCoding/ListingWithAPI";
+// import { CounterExample } from "./MachineCoding/CounterExample";
+// import { DigitalClock } from "./MachineCoding/DigitalClock";
+// import { Stopwatch } from "./MachineCoding/Stopwatch";
+// import { StringReverse } from "./MachineCoding/StringReverse";
 
 function App() {
 	return (
 		<div>
-			{/* <NormalRouting /> */}
-			{/* <NestedRouting /> */}
-			{/* <DynamicRouting /> */}
-			<CreateBrowserRouter />
+			{/* <CounterExample /> */}
+			{/* <DigitalClock /> */}
+			{/* <Stopwatch /> */}
+			{/* <StringReverse /> */}
+			{/* <ListingWithAPI /> */}
+			<FilterSearchBox />
 		</div>
 	);
 }

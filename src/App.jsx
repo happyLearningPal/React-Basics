@@ -1,14 +1,15 @@
-import { useContext } from "react";
+//import { useContext } from "react";
 import "./App.css";
 // import { CreateBrowserRouter } from "./Components/CreateBrowserRouter/CreateBrowserRouter";
 // import { DynamicRouting } from "./Components/DynamicRouting/DynamicRouting";
 // import { NestedRouting } from "./Components/NestedRouting/NestedRouting";
 // import { NormalRouting } from "./Components/NormalRouting/NormalRouting";
-import { CountContext } from "./Context/CountContext";
-import { ContextExample } from "./Context/ContextExample";
+// import { CountContext } from "./Context/CountContext";
+// import { ContextExample } from "./Context/ContextExample";
+import { Fetch } from "./Components/Fetch/fetch";
 
 function App() {
-	const [, setCount] = useContext(CountContext);
+	//const [, setCount] = useContext(CountContext);
 	return (
 		<div>
 			{/* <NormalRouting /> */}
@@ -17,7 +18,7 @@ function App() {
 			{/* <CreateBrowserRouter /> */}
 
 			{/*Uncomment for Context example*/}
-			<section id="center">
+			{/* <section id="center">
 				<h1>Get started : Parent Component</h1>
 			</section>
 			<section>
@@ -29,7 +30,9 @@ function App() {
 					Click to increse count
 				</button>
 			</section>
-			<ContextExample />
+			<ContextExample /> */}
+
+			<Fetch />
 		</div>
 	);
 }

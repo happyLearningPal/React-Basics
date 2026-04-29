@@ -6,7 +6,8 @@ import "./App.css";
 // import { NormalRouting } from "./Components/NormalRouting/NormalRouting";
 // import { CountContext } from "./Context/CountContext";
 // import { ContextExample } from "./Context/ContextExample";
-import { Fetch } from "./Components/Fetch/fetch";
+//import { Fetch } from "./Components/Fetch/fetch";
+import { SequentialFetch } from "./Components/Fetch/SequentialFetch";
 
 function App() {
 	//const [, setCount] = useContext(CountContext);
@@ -32,7 +33,8 @@ function App() {
 			</section>
 			<ContextExample /> */}
 
-			<Fetch />
+			{/* <Fetch /> */}
+			<SequentialFetch />
 		</div>
 	);
 }

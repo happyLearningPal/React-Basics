@@ -136,3 +136,8 @@ code {
   flex-direction: column;
   margin-bottom: 10px;
 }
+
+.error {
+  color: red;
+  font-size: 12px;
+}

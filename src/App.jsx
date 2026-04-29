@@ -1,4 +1,5 @@
 //import { useContext } from "react";
+import { useRecoilValue } from "recoil";
 import "./App.css";
 // import { CreateBrowserRouter } from "./Components/CreateBrowserRouter/CreateBrowserRouter";
 // import { DynamicRouting } from "./Components/DynamicRouting/DynamicRouting";
@@ -7,10 +8,17 @@ import "./App.css";
 // import { CountContext } from "./Context/CountContext";
 // import { ContextExample } from "./Context/ContextExample";
 //import { Fetch } from "./Components/Fetch/fetch";
-import { SequentialFetch } from "./Components/Fetch/SequentialFetch";
+//import { SequentialFetch } from "./Components/Fetch/SequentialFetch";
+// import { loggedInUserState, updatedUserNameState } from "./recoil/atom";
+// import Counter from "./Components/Counter/Counter";
 
 function App() {
 	//const [, setCount] = useContext(CountContext);
+	// const loggedInUserStateVal = useRecoilValue(loggedInUserState);
+	// const updatedUserName = useRecoilValue(updatedUserNameState);
+
+	//console.log("loggedInUserState>>>>>>", loggedInUserStateVal, updatedUserName);
+
 	return (
 		<div>
 			{/* <NormalRouting /> */}
@@ -34,7 +42,9 @@ function App() {
 			<ContextExample /> */}
 
 			{/* <Fetch /> */}
-			<SequentialFetch />
+			{/* <SequentialFetch /> */}
+
+			<Counter />
 		</div>
 	);
 }

@@ -114,3 +114,25 @@ code {
   display: flex;
   gap: 2rem;
 }
+
+.form {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */        /* full screen height */
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 280px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.field{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}

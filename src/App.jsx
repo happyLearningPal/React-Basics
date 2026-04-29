@@ -1,6 +1,7 @@
 //import { useContext } from "react";
-import { useRecoilValue } from "recoil";
+//import { useRecoilValue } from "recoil";
 import "./App.css";
+import { Form } from "./Components/Form/Form";
 // import { CreateBrowserRouter } from "./Components/CreateBrowserRouter/CreateBrowserRouter";
 // import { DynamicRouting } from "./Components/DynamicRouting/DynamicRouting";
 // import { NestedRouting } from "./Components/NestedRouting/NestedRouting";
@@ -44,7 +45,8 @@ function App() {
 			{/* <Fetch /> */}
 			{/* <SequentialFetch /> */}
 
-			<Counter />
+			{/* <Counter /> */}
+			<Form />
 		</div>
 	);
 }

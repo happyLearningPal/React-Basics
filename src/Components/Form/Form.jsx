@@ -1,5 +1,7 @@
+import { zodResolver } from "@hookform/resolvers/zod";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { formSchema } from "../../schemas/form-schema";
 
 export const Form = () => {
 	const {
@@ -7,8 +9,9 @@ export const Form = () => {
 		handleSubmit,
 		formState: { errors },
 	} = useForm({
-		mode: "onSubmit", // 🔥 validate only on submit
-		reValidateMode: "onSubmit", // optional (no re-validation on change)
+		mode: "onSubmit",
+		reValidateMode: "onSubmit",
+		resolver: zodResolver(formSchema),
 	});
 
 	const fnSubmit = (data) => {

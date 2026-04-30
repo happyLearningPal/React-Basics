@@ -1,7 +1,9 @@
 //import { useContext } from "react";
 //import { useRecoilValue } from "recoil";
+import { lazy, Suspense } from "react";
 import "./App.css";
-import { Form } from "./Components/Form/Form";
+//import { Counter } from "./Components/Counter/Counter";
+//import { Form } from "./Components/Form/Form";
 // import { CreateBrowserRouter } from "./Components/CreateBrowserRouter/CreateBrowserRouter";
 // import { DynamicRouting } from "./Components/DynamicRouting/DynamicRouting";
 // import { NestedRouting } from "./Components/NestedRouting/NestedRouting";
@@ -11,7 +13,8 @@ import { Form } from "./Components/Form/Form";
 //import { Fetch } from "./Components/Fetch/fetch";
 //import { SequentialFetch } from "./Components/Fetch/SequentialFetch";
 // import { loggedInUserState, updatedUserNameState } from "./recoil/atom";
-// import Counter from "./Components/Counter/Counter";
+
+const Counter = lazy(() => import("./Components/Counter/Counter"));
 
 function App() {
 	//const [, setCount] = useContext(CountContext);
@@ -45,8 +48,11 @@ function App() {
 			{/* <Fetch /> */}
 			{/* <SequentialFetch /> */}
 
-			{/* <Counter /> */}
-			<Form />
+			<Suspense fallback={<p>Loading....</p>}>
+				<Counter />
+			</Suspense>
+
+			{/* <Form /> */}
 		</div>
 	);
 }

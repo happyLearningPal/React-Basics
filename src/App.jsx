@@ -1,5 +1,6 @@
 import "./App.css";
 import { FilterSearchBox } from "./MachineCoding/FilterSearchBox";
+import { VirtualizedList } from "./MachineCoding/VirtualizedList";
 // import { ListingWithAPI } from "./MachineCoding/ListingWithAPI";
 // import { CounterExample } from "./MachineCoding/CounterExample";
 // import { DigitalClock } from "./MachineCoding/DigitalClock";
@@ -14,7 +15,9 @@ function App() {
 			{/* <Stopwatch /> */}
 			{/* <StringReverse /> */}
 			{/* <ListingWithAPI /> */}
-			<FilterSearchBox />
+			{/* <FilterSearchBox /> */}
+
+			<VirtualizedList />
 		</div>
 	);
 }

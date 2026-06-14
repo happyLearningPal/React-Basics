@@ -1,6 +1,13 @@
 import "./App.css";
-import { FilterSearchBox } from "./MachineCoding/FilterSearchBox";
-import { VirtualizedList } from "./MachineCoding/VirtualizedList";
+// import { CustomDropdown } from "./MachineCoding/CustomDropdown";
+// import DebounceSearch from "./MachineCoding/DebounceSearch";
+// import { FilterSearchBox } from "./MachineCoding/FilterSearchBox";
+// import { Pagination } from "./MachineCoding/Pagination";
+// import PaginationWithSearch from "./MachineCoding/PaginationWithSearch";
+// import { SearchFilter } from "./MachineCoding/SearchFilter";
+import { StopwatchCounter } from "./MachineCoding/StopwatchCounter";
+// import { TodoList } from "./MachineCoding/TodoList";
+// import { VirtualizedList } from "./MachineCoding/VirtualizedList";
 // import { ListingWithAPI } from "./MachineCoding/ListingWithAPI";
 // import { CounterExample } from "./MachineCoding/CounterExample";
 // import { DigitalClock } from "./MachineCoding/DigitalClock";
@@ -16,8 +23,15 @@ function App() {
 			{/* <StringReverse /> */}
 			{/* <ListingWithAPI /> */}
 			{/* <FilterSearchBox /> */}
+			{/* <VirtualizedList /> */}
+			{/* <TodoList /> */}
+			{/* <SearchFilter /> */}
+			{/* <Pagination /> */}
+			{/* <PaginationWithSearch /> */}
+			{/* <CustomDropdown /> */}
+			{/* <DebounceSearch /> */}
 
-			<VirtualizedList />
+			<StopwatchCounter />
 		</div>
 	);
 }

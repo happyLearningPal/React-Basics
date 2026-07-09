@@ -6,6 +6,7 @@ import "./App.css";
 // import PaginationWithSearch from "./MachineCoding/PaginationWithSearch";
 // import { SearchFilter } from "./MachineCoding/SearchFilter";
 import { StopwatchCounter } from "./MachineCoding/StopwatchCounter";
+import Throttle from "./MachineCoding/Throttle";
 // import { TodoList } from "./MachineCoding/TodoList";
 // import { VirtualizedList } from "./MachineCoding/VirtualizedList";
 // import { ListingWithAPI } from "./MachineCoding/ListingWithAPI";
@@ -31,7 +32,8 @@ function App() {
 			{/* <CustomDropdown /> */}
 			{/* <DebounceSearch /> */}
 
-			<StopwatchCounter />
+			{/* <StopwatchCounter /> */}
+			<Throttle />
 		</div>
 	);
 }

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import useThrottle from "./useThrottle";
+import useThrottle from "./hooks/useThrottle";
 
 export default function Throttle() {
 	const handleScroll = useThrottle(() => {

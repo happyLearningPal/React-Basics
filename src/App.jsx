@@ -1,71 +1,54 @@
-//import { useContext } from "react";
-//import { useRecoilValue } from "recoil";
-//import { lazy, Suspense } from "react";
-import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Dashboard from "./Components/HOC/Dashboard";
-//import { Counter } from "./Components/Counter/Counter";
-//import { Form } from "./Components/Form/Form";
-// import { CreateBrowserRouter } from "./Components/CreateBrowserRouter/CreateBrowserRouter";
-// import { DynamicRouting } from "./Components/DynamicRouting/DynamicRouting";
-// import { NestedRouting } from "./Components/NestedRouting/NestedRouting";
-// import { NormalRouting } from "./Components/NormalRouting/NormalRouting";
-// import { CountContext } from "./Context/CountContext";
-// import { ContextExample } from "./Context/ContextExample";
-//import { Fetch } from "./Components/Fetch/fetch";
-//import { SequentialFetch } from "./Components/Fetch/SequentialFetch";
-// import { loggedInUserState, updatedUserNameState } from "./recoil/atom";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo, deleteTodo } from "./redux/todoSlice";
 
-//const Counter = lazy(() => import("./Components/Counter/Counter"));
+const App = () => {
+	const [text, setText] = useState("");
+	const dispatch = useDispatch();
+	const todos = useSelector((state) => state.todo);
 
-function App() {
-	//const {setCount} = useContext(CountContext);
-	// const loggedInUserStateVal = useRecoilValue(loggedInUserState);
-	// const updatedUserName = useRecoilValue(updatedUserNameState);
+	const handleAddTodo = () => {
+		if (text) {
+			dispatch(addTodo(text));
+			setText("");
+		}
+	};
 
-	//console.log("loggedInUserState>>>>>>", loggedInUserStateVal, updatedUserName);
+	const handleDelete = (id) => {
+		dispatch(deleteTodo(id));
+	};
 
-	// const App2 = lazy(() => import("./Components/App2/App2"));
+	console.log(todos);
 
 	return (
 		<div>
-			{/* <NormalRouting /> */}
-			{/* <NestedRouting /> */}
-			{/* <DynamicRouting /> */}
-			{/* <CreateBrowserRouter /> */}
+			<h1>Redux toolkit example</h1>
+			<br />
 
-			{/*Uncomment for Context example*/}
-			{/* <section id="center">
-				<h1>Get started : Parent Component</h1>
-			</section>
-			<section>
-				<button
-					className="counter"
-					onClick={() => setCount((count) => count + 1)}
-				>
-					{" "}
-					Click to increse count
-				</button>
-			</section>
-			<ContextExample /> */}
+			<input
+				type="text"
+				placeholder="Enter todo"
+				value={text}
+				onChange={(e) => setText(e.target.value)}
+			/>
+			<button onClick={handleAddTodo}>Add todo</button>
 
-			{/* <Fetch /> */}
-			{/* <SequentialFetch /> */}
-
-			{/* <Suspense fallback={<p>Loading....</p>}>
-				<Counter />
-			</Suspense> */}
-
-			{/* <Form /> */}
-			{/* <App2 /> */}
-			<BrowserRouter>
-				<Routes>
-					<Route path="/dashboard" element={<Dashboard />} />
-					<Route path="/login" element={<p>Please login</p>} />
-				</Routes>
-			</BrowserRouter>
+			<ul>
+				{todos.map((item) => {
+					return (
+						<div
+							key={item.id}
+							style={{ display: "flex", justifyContent: "center" }}
+						>
+							<li>{item.text}</li>
+							<button type="button" onClick={() => handleDelete(item.id)}>
+								Remove
+							</button>
+						</div>
+					);
+				})}
+			</ul>
 		</div>
 	);
-}
-
+};
 export default App;

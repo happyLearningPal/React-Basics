@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodo, deleteTodo } from "./redux/todoSlice";
+import { Parent } from "./Parent";
+import Dark from "./Dark";
 
 const App = () => {
 	const [text, setText] = useState("");
@@ -20,10 +22,14 @@ const App = () => {
 
 	console.log(todos);
 
+	const title = "Redux toolkit example";
+
 	return (
 		<div>
-			<h1>Redux toolkit example</h1>
+			<Parent title={title} />
 			<br />
+
+			<Dark />
 
 			<input
 				type="text"

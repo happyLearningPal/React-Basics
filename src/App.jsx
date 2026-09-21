@@ -1,4 +1,7 @@
 import "./App.css";
+import Example1 from "./Performance optimization/Example1";
+// import ProgressBar from "./MachineCoding/ProgressBar";
+// import Stepper from "./MachineCoding/Stepper";
 import InfiniteScroll1 from "./MachineCoding/InfiniteScroll/InfiniteScroll1";
 import InfiniteScroll2 from "./MachineCoding/InfiniteScroll/InfiniteScroll2";
 // import { App2 } from "./MachineCoding/Practice/App2";
@@ -38,9 +41,13 @@ function App() {
 			{/* <StopwatchCounter /> */}
 			{/* <Throttle /> */}
 
-			{/* <App2 /> */}
 			{/* <InfiniteScroll1 /> */}
 			<InfiniteScroll2 />
+
+			{/* <ProgressBar /> */}
+			{/* <Stepper /> */}
+
+			{/* <Example1 /> */}
 		</div>
 	);
 }

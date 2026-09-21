@@ -14,6 +14,7 @@ function InfiniteScroll2() {
 	// -----------------------------
 	useEffect(() => {
 		const fetchUsers = async () => {
+			//setting loading true
 			loadingRef.current = true;
 			setLoading(true);
 
@@ -36,6 +37,7 @@ function InfiniteScroll2() {
 			} catch (error) {
 				console.log("Error:", error);
 			} finally {
+				//setting loading false
 				loadingRef.current = false;
 				setLoading(false);
 			}
